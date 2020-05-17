@@ -1,8 +1,18 @@
 version: 2.1
 jobs:
-  build:
+  build-storybook:
     docker:
       - image: "circleci/node:latest"
     steps:
       - checkout
-      - run: echo 'hello world'
+      - run:
+          name: Installing Dependencies
+          command: npm install
+      - run:
+          name: Build Storybook
+          command: npm deploy-storybook
+
+workflows:
+  deploy:
+    jobs:
+      - build-storybook
