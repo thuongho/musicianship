@@ -22,7 +22,7 @@ jobs:
           command: yarn test
       - run:
           name: Build Storybook
-          command: yarn deploy-storybook -- --ci
+          command: yarn deploy-storybook --ci
       - run:
           name: Build Release
           command: |
