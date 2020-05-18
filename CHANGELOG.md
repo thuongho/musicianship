@@ -1,3 +1,15 @@
+# v0.1.2 (Mon May 18 2020)
+
+#### 🐛 Bug Fix
+
+- Add custom message for ci to ignore gh-pages [#5](https://github.com/thuongho/musicianship/pull/5) ([@thuongho](https://github.com/thuongho))
+
+#### Authors: 1
+
+- Sam H. ([@thuongho](https://github.com/thuongho))
+
+---
+
 # v0.1.1 (Mon May 18 2020)
 
 #### 🐛 Bug Fix
