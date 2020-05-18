@@ -63,5 +63,8 @@
   "main": "index.js",
   "repository": "git@github.com:thuongho/musicianship.git",
   "author": "Thuong Ho <thuong.t.ho@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "storybook-deployer": {
+    "commitMessage": "Deploy Storybook [skip ci]"
+  }
 }
