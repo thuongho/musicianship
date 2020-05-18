@@ -24,6 +24,9 @@ jobs:
           name: Build Storybook
           command: yarn deploy-storybook --ci
       - run:
+          name: Ignore Storybook GH-Pages
+          command: yarn ignore-ghpages
+      - run:
           name: Build Release
           command: |
             if [ $CIRCLE_BRANCH = "master" ]
