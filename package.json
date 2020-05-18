@@ -1,7 +1,7 @@
 {
   "name": "musicianship",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -12,13 +12,18 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
     "release": "auto shipit"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
@@ -43,6 +49,7 @@
     "@storybook/react": "^5.3.18",
     "@storybook/storybook-deployer": "^2.8.6",
     "auto": "^9.32.3",
+    "cross-env": "^7.0.2",
     "husky": "^4.2.5",
     "prettier": "2.0.4",
     "pretty-quick": "^2.0.1"
@@ -51,5 +58,10 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "description": "Musicianship will carry you from dream to musician",
+  "main": "index.js",
+  "repository": "git@github.com:thuongho/musicianship.git",
+  "author": "Thuong Ho <thuong.t.ho@gmail.com>",
+  "license": "MIT"
 }
